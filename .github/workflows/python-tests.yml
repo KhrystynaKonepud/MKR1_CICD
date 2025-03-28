@@ -33,7 +33,7 @@ jobs:
       # Крок 4: Запуск тестів
       - name: Run tests
         run: |
-          pytest --maxfail=1 --disable-warnings -q
+          pytest -s --maxfail=1 --disable-warnings -q
 
   # Перевірка на відповідність PEP8
   pep8:
