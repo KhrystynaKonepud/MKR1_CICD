@@ -35,5 +35,5 @@ def main():
     print("Файли same.txt і diff.txt успішно створено!")
 
 
-if name == "main":
+if __name__ == "main":
     main()
