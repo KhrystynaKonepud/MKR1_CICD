@@ -16,3 +16,9 @@ def compare_files(file1, file2):
     diff_lines = [line for line in lines1 + lines2 if line not in same_lines]
 
     return same_lines, diff_lines
+
+def write_to_file(filename, lines):
+    """Записує рядки у файл."""
+    with open(filename, 'w', encoding='utf-8') as file:
+        file.write("\n".join(lines) + "\n" if lines else "")
+
