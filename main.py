@@ -22,3 +22,18 @@ def write_to_file(filename, lines):
     with open(filename, 'w', encoding='utf-8') as file:
         file.write("\n".join(lines) + "\n" if lines else "")
 
+
+def main():
+    file1 = input("Введіть назву першого файлу: ")
+    file2 = input("Введіть назву другого файлу: ")
+
+    same, diff = compare_files(file1, file2)
+
+    write_to_file("same.txt", same)
+    write_to_file("diff.txt", diff)
+
+    print("Файли same.txt і diff.txt успішно створено!")
+
+
+if name == "main":
+    main()
